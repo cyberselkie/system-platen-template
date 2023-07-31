@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://platen.io/schemas/config/schema.json
 # Update to your own settings for URL/title
-baseURL: https://platen-template.netlify.app/
+baseURL: localhost
 title:   Platen Example
 
 module:
@@ -19,3 +19,6 @@ menu:
 
 params:
   description: My site description.
+  platen:
+    theme:
+      mode: light

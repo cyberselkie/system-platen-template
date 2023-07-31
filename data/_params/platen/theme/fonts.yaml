@@ -1,1 +1,18 @@
 # yaml-language-server: $schema=https://platen.io/modules/platen/config/site/theme/config/schema.json#/properties/fonts
+
+settings:
+  body: 
+    family: "'Geneva', mono"
+    selector: body
+  headings:
+    family: "'Chicago', mono"
+    selector: h1, h2, h3, h4, h5, h6
+  code:
+    family: "'Roboto', mono"
+    selector: code
+
+styles:
+    - chicago
+    - geneva
+    - monaco
+    
