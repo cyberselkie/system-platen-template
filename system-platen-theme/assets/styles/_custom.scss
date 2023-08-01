@@ -1,0 +1,280 @@
+//////////////*
+// Base
+:root {
+  --body-font-color: #000 !important;
+  --body-background: #fff !important;
+
+  --color-link: #000 !important;
+  --color-visited-link: #000 !important;
+
+  --box-shadow: 2px 2px !important;
+
+  /* Variables and styling modified from System.css 
+    found here -> https://github.com/sakofchit/system.css */
+
+  /* Spacing */
+  --element-spacing: 8px;
+  --grouped-element-spacing: 6px;
+
+  /* ---- ⚫️ Colors ⚪️ ---- */
+  /* Base Tokens */
+  --sys-color-white: #FFFFFF;
+  --sys-color-black: #000000;
+  --sys-color-grey: #A5A5A5;
+  --sys-color-darkgrey: #B6B7B8;
+
+  /* Theme Tokens */
+  --primary: var(--sys-color-white);
+  --secondary: var(--sys-color-black);
+  --tertiary: var(--sys-color-grey);
+
+  /* Component Tokens */
+  --disabled: var(--sys-color-darkgrey);
+
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 22px;
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, var(--secondary) 25%, transparent 25%, transparent 75%, var(--secondary) 75%, var(--secondary)), linear-gradient(45deg, var(--secondary) 25%, transparent 25%, transparent 75%, var(--secondary) 75%, var(--secondary));
+  background-color: var(--primary);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  width: 10px;
+  border-left: 2px solid var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 20px;
+  box-sizing: content-box;
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
+  border-right: none;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  background-repeat: no-repeat;
+  height: 23px;
+  background-image: url("images/icon/scrollbar-up.svg");
+}
+::-webkit-scrollbar-button:vertical:start:active {
+  background-repeat: no-repeat;
+  height: 23px;
+  background-image: url("images/icon/scrollbar-up-active.svg");
+}
+::-webkit-scrollbar-button:vertical:end {
+  height: 23px;
+  background-image: url("images/icon/scrollbar-down.svg");
+}
+::-webkit-scrollbar-button:vertical:end:active {
+  background-repeat: no-repeat;
+  height: 23px;
+  background-image: url("images/icon/scrollbar-down-active.svg");
+}
+
+::-webkit-scrollbar-button:horizontal:start {
+  background-repeat: no-repeat;
+  height: 23px;
+  background-image: url("images/icon/scrollbar-left.svg");
+}
+::-webkit-scrollbar-button:horizontal:start:active {
+  background-repeat: no-repeat;
+  height: 23px;
+  background-image: url("images/icon/scrollbar-left-active.svg");
+}
+::-webkit-scrollbar-button:horizontal:end {
+  height: 23px;
+  background-image: url("images/icon/scrollbar-right.svg");
+}
+::-webkit-scrollbar-button:horizontal:end:active {
+  background-repeat: no-repeat;
+  height: 23px;
+  background-image: url("images/icon/scrollbar-right-active.svg");
+}
+
+
+// Links
+body {
+  background: linear-gradient(90deg, var(--primary) 1px, transparent 1%) center, linear-gradient(var(--primary) 1px, transparent 1%) center, var(--secondary);
+  background-size: 2px 2px;
+  background-attachment: fixed;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+hr {
+  border-top: 0.15em solid var(--secondary);
+}
+h1,
+.heading {
+  font-family: Chicago;
+  font-size: 1em;
+}
+
+h2 {
+  font-family: Chicago;
+  font-size: 1em;
+}
+
+/* buttons */
+.button--text {
+  color: var(--color-link) !important;
+}
+
+//////////////*
+// Platen Page
+.platen-page {
+  background-color: #fff;
+  margin: 1rem;
+  overflow: hidden;
+  background-color: var(--primary);
+  border: 0.1em solid var(--secondary);
+}
+
+.platen-page h1 {
+  padding: 0 0.5em;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  background: var(--primary);
+  cursor: default;
+  font-family: Chicago_12;
+  // center
+  flex: none;
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+
+.platen-header {
+  flex: none;
+  align-items: center;
+  height: 2rem;
+  padding: 0.1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background: linear-gradient(var(--secondary) 50%, transparent 50%);
+  background-size: 6.6666666667% 13.3333333333%;
+  background-clip: content-box;
+  border: 1px solid #000;
+}
+
+#TableOfContents {
+  background-color: #fff;
+  overflow: hidden;
+  background-color: var(--primary);
+  border: 0.1em solid var(--secondary);
+  font-family: Inconsolata,Menlo,Chicago,Geneva !important;
+  font-size: 14px !important;
+}
+
+nav#TableOfContents sl-tree-item::part(label), nav#TableOfContents sl-tree-item::part(expand-button), nav#TableOfContentsMobile sl-tree-item::part(label), nav#TableOfContentsMobile sl-tree-item::part(expand-button) {
+  font-family: Inconsolata,Menlo,Chicago,Geneva !important;
+  font-size: 12px !important;
+  padding-bottom: 0.3rem;
+}
+
+aside nav ul {
+  padding: 0.5rem;
+  padding-bottom: 0.1rem;
+}
+
+#platen-search-results {
+  padding: 0 0.2rem;
+}
+
+.platen-menu {
+  font-size: 12px;
+}
+
+.platen-menu-content {
+  margin: 1rem 0;
+  border: 1px solid #000;
+}
+
+.platen-search, .platen-display-options {
+  border: 1px solid #000;
+  font-family: Inconsolata,Menlo,Chicago,Geneva !important;
+}
+
+nav {
+  font-family: Inconsolata,Menlo,Chicago,Geneva !important;
+  font-size: 12px;
+}
+
+// Wider Screens
+@media screen and (min-width: 80rem) {
+  .platen-toc .platen-toc-content {
+        padding: 0;
+        margin: 1rem 0 1rem 0;
+  }
+}
+
+
+//////////////*
+// Markdown
+.markdown {
+  blockquote {
+    margin: $padding-large 0;
+    border: 2px solid;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--primary);
+    font-family: "Chicago_12";
+    border-radius: 0px;
+
+    :first-child {
+      margin-top: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  code {
+    padding: 0 $padding-small;
+    background: var(--gray-200);
+    border-radius: $border-radius;
+    font-size: 0.875em;
+  }
+
+  pre {
+    padding: $padding-large;
+    background: var(--gray-100);
+    border-radius: $border-radius;
+    overflow-x: auto;
+
+    code {
+      padding: 0;
+      background: none;
+      overflow: scroll;
+    }
+  }
+
+  // Special case for highlighted code with line numbers
+  .highlight table tr {
+    td:nth-child(1) pre {
+      margin: 0;
+      padding-inline-end: 0;
+    }
+    td:nth-child(2) pre {
+      margin: 0;
+      padding-inline-start: 0;
+    }
+  }
+}
