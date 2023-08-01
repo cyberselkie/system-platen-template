@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://platen.io/schemas/config/schema.json
+
+module:
+  imports:
+    - path: github.com/platenio/platen/modules/platen
+
+params:
+  platen:
+    theme:
+      mode: light
