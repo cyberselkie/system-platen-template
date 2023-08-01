@@ -1,10 +1,13 @@
 # yaml-language-server: $schema=https://platen.io/schemas/config/schema.json
 # Update to your own settings for URL/title
 baseURL: https://system-platen-theme.netlify.app
-title:   Platen Example
+title:   System Platen Theme
 
 module:
+  replacements: >-
+    github.com/cyberselkie/system-platen-theme -> ../
   imports:
+    - path: github.com/cyberselkie/system-platen-theme
     - path: github.com/platenio/platen/modules/platen
 
 menu:
@@ -18,7 +21,7 @@ menu:
       weight: 10
 
 params:
-  description: My site description.
+  description: System Platen Theme.
   platen:
     theme:
       mode: light
