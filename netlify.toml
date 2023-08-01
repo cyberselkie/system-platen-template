@@ -1,6 +1,8 @@
 [build]
+base = "exampleSite/"
 publish = "public"
 command = "hugo --gc --minify"
+ignore = "exit 1"
 
 [context.production.environment]
 HUGO_VERSION = "0.111.3"
