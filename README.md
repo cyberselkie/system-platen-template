@@ -2,6 +2,10 @@
 
 ## Installation
 
+Type this in your site directory.
+
+`go get github.com/cyberselkise/system-platen-theme`
+
 Put this in your config.yaml or hugo.yaml file. This path should be at the top.
 
 ```yaml
